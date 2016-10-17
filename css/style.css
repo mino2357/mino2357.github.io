@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+/* すべてのページに適用 */
+
+/** {*/
+/* 	margin:0; padding:0; */	/*全要素のマージン・パディングをリセット*/
+/*}*/
+
+/*body {
+background-color: #f7f6eb;
+} */
+
+#menu1 ul{
+margin: 0; 
+padding: 0; 
+list-style: none;
+}
+
+#menu1 li{ 
+display: inline; 
+padding: 0; 
+margin: 0; 
+float: left;
+}
+
+#menu1 li a{
+display: block; 
+border: 1px solid #666;
+background-color: #ccc;
+padding: 3px;
+text-decoration: none;
+color: #333;
+width: 100px; 
+margin: 1px;
+text-align: center;
+font-size: 14px;
+}
+#menu1 li a:hover{
+background-color: #2d56be;
+color: #fff;
+}
+
+.cut{
+	clear: both;
+}
+
+#menu2 ul{
+margin: 0; 
+padding: 0; 
+list-style: none;
+}
+
+#menu2 li{ 
+display: inline; 
+padding: 0; 
+margin: 0; 
+float: left;
+}
+
+#menu2 li a{
+display: block; 
+border: 1px solid #666;
+background-color: #ccc;
+padding: 3px;
+text-decoration: none;
+color: #333;
+width: 100px; 
+margin: 1px;
+text-align: center;
+font-size: 14px;
+}
+#menu2 li a:hover{
+background-color: #2d56be;
+color: #fff;
+}
+
+/* footer */
+
+#footer{
+	margin-top: 30px;
+	margin-left: 20px;
+	margin-right: 20px;
+	padding:20px 0px 20px 0px;
+	font-size: smaller;
+	color: #442220;
+	clear:both;
+	text-align:center;			/*センタリング*/
+}
+
+#contents{
+	clear: both;
+}
+
+.MathJax_Display { text-align: left !important; text-indent: 2em; }
+
