@@ -10,7 +10,7 @@
 %\maketitle
 
 \section*{常微分方程式の数値解法入門001}
-ロケットの打ち上げを考える．ロケットの質量は$m$とする．直交座標における原点$O$からロケットを発射するとする．時刻$t$でのロケットの位置を$\vec{r} = (x(t), y(t))$とする．はじめの速さは$v$（固定）で打ち上げる．初期条件は以下の通り，
+ロケットの打ち上げを考える．ロケットの質量は$m$とする．直交座標($x$軸は右方向，$y$軸は上方向に取る)における原点$O$からロケットを発射するとする．時刻$t$でのロケットの位置を$\vec{r} = (x(t), y(t))$とする．はじめの速さは$v$（固定）で打ち上げる．初期条件は以下の通り，
 %
 \begin{align*}
 \dfrac{dx(0)}{dt} = v \cos \theta \\
@@ -51,11 +51,11 @@ m \dfrac{d^2 y(t)}{dt^2} = - k \dfrac{dy(t)}{dt} -mg
 ITMZは実験との比較により，上記のロケットモデルではまだ不十分なことがわかり，モデル方程式を修正することにした．ここで，速度の2乗に比例する空気抵抗も考慮にいれることにした．運動方程式は以下のようになった．（確認せよ．）
 $x$軸方向は，
 \begin{align*}
-m \dfrac{d^2 x(t)}{dt^2} = - k \dfrac{dx(t)}{dt} - l \left( \dfrac{dx(t)}{dt} \right)^2 
+m \dfrac{d^2 x(t)}{dt^2} = - k \dfrac{dx(t)}{dt} - l \dfrac{dx(t)}{dt} \sqrt{ \left( \dfrac{dx(t)}{dt} \right)^2 + \left( \dfrac{dy(t)}{dt} \right)^2 } 
 \end{align*}
 $y$軸方向は，
 \begin{align*}
-m \dfrac{d^2 y(t)}{dt^2} = - k \dfrac{dy(t)}{dt} - l \left( \dfrac{dy(t)}{dt} \right)^2  - mg
+m \dfrac{d^2 y(t)}{dt^2} = - k \dfrac{dy(t)}{dt} -  l \dfrac{dy(t)}{dt} \sqrt{ \left( \dfrac{dx(t)}{dt} \right)^2 + \left( \dfrac{dy(t)}{dt} \right)^2 } - mg
 \end{align*}
 ここで，$l$は速度の2乗に比例する空気抵抗の比例係数である．
 
