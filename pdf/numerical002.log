@@ -1,9 +1,9 @@
-This is e-pTeX, Version 3.14159265-p3.7-160201-2.6 (utf8.euc) (TeX Live 2016) (preloaded format=platex 2016.10.17)  26 JAN 2018 19:49
+This is e-pTeX, Version 3.14159265-p3.7-160201-2.6 (utf8.euc) (TeX Live 2016) (preloaded format=platex 2016.10.17)  26 JAN 2018 20:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**numerical001.tex
-(./numerical001.tex
+**numerical002.tex
+(./numerical002.tex
 pLaTeX2e <2016/09/08> (based on LaTeX2e <2016/03/31> patch level 3)
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 (/usr/local/texlive/2016/texmf-dist/tex/platex/base/jarticle.cls
@@ -88,8 +88,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
 LaTeX Info: Redefining \[ on input line 2739.
 LaTeX Info: Redefining \] on input line 2740.
 )
-(./numerical001.aux)
-\openout1 = `numerical001.aux'.
+(./numerical002.aux)
+\openout1 = `numerical002.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
@@ -117,14 +117,14 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 22.
  [1
 
-] [2] [3] (./numerical001.aux) ) 
+] (./numerical002.aux) ) 
 Here is how much of TeX's memory you used:
  903 strings out of 493682
  10041 string characters out of 6149640
- 73281 words of memory out of 5000000
+ 70281 words of memory out of 5000000
  4526 multiletter control sequences out of 15000+600000
  15175 words of font info for 60 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 27i,11n,20p,299b,228s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 27i,9n,20p,208b,228s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on numerical001.dvi (3 pages, 7064 bytes).
+Output written on numerical002.dvi (1 page, 1500 bytes).
