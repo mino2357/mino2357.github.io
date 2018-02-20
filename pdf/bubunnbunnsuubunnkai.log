@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.7-160201-2.6 (utf8.euc) (TeX Live 2016) (preloaded format=platex 2016.10.17)  19 FEB 2018 17:00
+This is e-pTeX, Version 3.14159265-p3.7-160201-2.6 (utf8.euc) (TeX Live 2016) (preloaded format=platex 2016.10.17)  20 FEB 2018 18:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -175,14 +175,18 @@ LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
 (Font)              scaled to size 9.60999pt on input line 86.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 9.60999pt on input line 86.
-[3]
+[3] [4] [5] [6]
+Overfull \hbox (20.25424pt too wide) in paragraph at lines 211--211
+[] 
+ []
+
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 133.
+(Font)              scaled to size 6.72699pt on input line 218.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 5.76599pt on input line 133.
+(Font)              scaled to size 5.76599pt on input line 218.
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 5.76599pt on input line 133.
- [4] (./bubunnbunnsuubunnkai.aux) ) 
+(Font)              scaled to size 5.76599pt on input line 218.
+[7] (./bubunnbunnsuubunnkai.aux) ) 
 Here is how much of TeX's memory you used:
  1131 strings out of 493682
  12832 string characters out of 6149640
@@ -190,6 +194,6 @@ Here is how much of TeX's memory you used:
  4736 multiletter control sequences out of 15000+600000
  16446 words of font info for 75 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 27i,11n,24p,237b,242s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 27i,12n,24p,237b,242s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on bubunnbunnsuubunnkai.dvi (4 pages, 12352 bytes).
+Output written on bubunnbunnsuubunnkai.dvi (7 pages, 20148 bytes).

@@ -98,7 +98,11 @@ $k$と$k+1$の差は$1$であった．ここでは，一般化して，差を$\a
 \begin{align*}
 \sum_{k=1}^{n} \dfrac{1}{k(k+\alpha)} \ \ \ \ \ (\alpha \neq -1)
 \end{align*}
-この級数と極限値を求めたい．その前に準備が必要である．
+この級数と極限値を求めたい．その前に準備が必要である．まずは，
+\begin{align*}
+\sum_{k=1}^{n} \dfrac{1}{k\left(k+\dfrac{1}{2}\right)}
+\end{align*}
+を考えよう．
 
 \subsection*{ガンマ関数}
 実部が正となる複素数$z \in \mathbb{C}$について，次の積分で定義される関数
@@ -124,11 +128,92 @@ $k$と$k+1$の差は$1$であった．ここでは，一般化して，差を$\a
 \begin{align*}
 \psi (z)={\frac  {d}{dz}}\log {\Gamma (z)}={\frac  {\Gamma '(z)}{\Gamma (z)}}
 \end{align*}
-今求めたい極限値を導出するには以下の関係式を用いる．
+ここで，ガンマ関数を微分することで，
 \begin{align*}
-\psi (z)=\lim _{{n\to \infty }}\left\{\log {n}-{\frac  {1}{z}}-\sum _{{k=1}}^{{n}}{\frac  {1}{z+k}}\right\}
+\Gamma'(z+1) = z\Gamma'(z) + \Gamma(z)
 \end{align*}
-続く...
+ここで，両辺を$\Gamma(z+1)$で割ると，
+\begin{align*}
+\dfrac{\Gamma'(z+1)}{\Gamma(z+1)} &= \dfrac{z\Gamma'(z) + \Gamma(z)}{\Gamma(z+1)} \\
+&= \dfrac{z\Gamma'(z) + \Gamma(z)}{z\Gamma(z)} \\
+&= \dfrac{\Gamma'(z)}{\Gamma(z)} + \dfrac{1}{z}
+\end{align*}
+よって，ディガンマ関数を用いると，
+\begin{align*}
+\psi(z+1) = \psi(z) + \dfrac{1}{z}
+\end{align*}
+少しの計算で次の等式を得る．$H_n$はハーモニックナンバーである．（証明は読者に任せる．）今，$n \in \mathbb{N}$としよう．
+\begin{align*}
+\psi (n)= & \psi(1) +\sum _{{k=1}}^{{n-1}}{\frac  {1}{k}}\\
+= & -\gamma +H_{{n-1}}
+\end{align*}
+また，半整数について，
+\begin{align*}
+\psi (n+1/2) =& \psi\left( 1/ 2 \right)+\sum _{{k=0}}^{{n-1}}{\frac  {1}{k+\dfrac{1}{2}}} \\
+=& -\gamma -2\log {2}+\sum _{{k=0}}^{{n-1}}{\frac  {1}{k+\dfrac{1}{2}}} \\
+=& -\gamma -2\log {2}+ 2 + \sum _{{k=1}}^{{n-1}}{\frac  {1}{k+\dfrac{1}{2}}}
+\end{align*}
+ここで，
+\begin{align*}
+\psi(1) &= -\gamma \\
+\psi\left( \dfrac{1}{2} \right) &= -\gamma -2\log 2
+\end{align*}
+を用いた．（証明略．）
+\begin{align*}
+\sum_{k=1}^{n-1}\dfrac{1}{k\left(k+\dfrac{1}{2}\right)} =& 2 \sum_{k=1}^{n-1} \left( \dfrac{1}{k} - \dfrac{1}{k+\dfrac{1}{2}} \right) \\
+=& 2 \left( \sum_{k=1}^{n-1} \dfrac{1}{k} - \sum_{k=1}^{n-1} \dfrac{1}{k+\dfrac{1}{2}} \right) \\
+=& 2 \left\{ \psi(n)+ \gamma - \left( \psi\left( n + 1/2 \right) + \gamma + 2\log 2 - 2 \right) \right\} \\
+=& 2 \left( \psi(n) - \psi\left( n + 1/2 \right) + 2 - 2\log 2 \right)
+\end{align*}
+ここで，ディガンマ関数の漸近展開は，
+\begin{align*}
+\psi(n) =& \log z - \dfrac{1}{2z} - \dfrac{1}{12z^2} + \dfrac{1}{120z^4} + \mathcal{O}\left( \left( \dfrac{1}{z} \right)^6 \right) \\
+\psi(n+1/2) =& \log z + \dfrac{1}{24z^2} - \dfrac{7}{960z^4} + \mathcal{O}\left( \left( \dfrac{1}{z} \right)^6 \right)
+\end{align*}
+よって，これらの差は漸近展開は漸近冪級数展開となる．
+\begin{align*}
+\psi(n) - \psi(n+1/2) = - \dfrac{1}{2z} - \dfrac{1}{8z^2} + \dfrac{1}{64z^4} + \mathcal{O}\left( \left( \dfrac{1}{z} \right)^5 \right)
+\end{align*}
+ゆえに，
+\begin{align*}
+\sum_{k=1}^{n-1}\dfrac{1}{k\left(k+\dfrac{1}{2}\right)} =& 2 \left( \psi(n) - \psi\left( n + 1/2 \right) + 2 - 2\log 2 \right)
+\end{align*}
+に対して，$n \to \infty$の極限を取れば，
+\begin{align*}
+\sum_{k=1}^{\infty}\dfrac{1}{k\left(k+\dfrac{1}{2}\right)} =& 2 \left( 2 - 2\log 2 \right) \\
+=& 4(1 - \log 2)
+\end{align*}
+となる．これを参考に，
+\begin{align*}
+\sum_{k=1}^{n} \dfrac{1}{k(k+\alpha)} \ \ \ \ \ (\alpha \neq -1)
+\end{align*}
+を求めることは読者に任せる．
+\subsection*{その他の話題}
+$\alpha \to 0$を考えると，
+\begin{align*}
+\lim_{x \to 0}\dfrac{H_{x}}{x} = \dfrac{\pi^2}{6}
+\end{align*}
+また，計算を進めると，
+\begin{align*}
+\dfrac{1}{2}\sum_{k=1}^{\infty}\dfrac{H_{k}}{k^2} = \zeta(3)
+\end{align*}
+別表現は，
+\begin{align*}
+\dfrac{1}{2}\sum_{k=1}^{\infty} \left\{ \dfrac{1}{k^2}\left( \dfrac{\Gamma'(k+1)}{\Gamma(k+1)} + \gamma \right) \right\} = \zeta(3)
+\end{align*}
+となる．これを一般化して数式処理ソフトにより計算させると，
+\begin{align*}
+\sum_{k=1}^{\infty}\dfrac{H_{k}}{k^{15}}=-\zeta (7) \zeta (9)-\zeta (5) \zeta (11)-\zeta (3) \zeta(13)+\frac{3617 \pi ^{16}}{76621545000}
+\end{align*}
+や，
+\begin{align*}
+\sum_{k=1}^{\infty}\dfrac{H_{k}}{k^{21}}=-\frac{\zeta (11)^2}{2}-\zeta (9) \zeta (13)-\zeta (7) \zeta (15)-\zeta (5) \zeta(17)-\zeta (3) \zeta (19)+\frac{77683 \pi ^{22}}{1169378864403750}
+\end{align*}
+\begin{align*}
+\sum_{k=1}^{\infty}\dfrac{H_{k}}{k^{23}}=&-\zeta (11) \zeta (13)-\zeta (9) \zeta (15)-\zeta (7) \zeta (17)-\zeta (5) \zeta(19)-\zeta (3) \zeta (21) \\
+&+\frac{236364091 \pi ^{24}}{32307131514201043500}
+\end{align*}
+を得る．
 
 \footnote[0]{
 質問等はmino2357あっとgmail.comまで
