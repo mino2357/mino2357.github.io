@@ -1,0 +1,69 @@
+\documentclass[12pt]{jsarticle}
+\usepackage{amsmath}
+\usepackage[usenames]{color} %フォントカラー
+\usepackage{amssymb} %数式記号
+\usepackage[utf8]{inputenc} %発音区別符アルファベットの直接入力
+\usepackage{amscd}
+\usepackage{pb-diagram}
+
+\renewcommand{\today}{ \number \day \  {\ifcase \month \or January\or February\or March\or April\or May \or June\or July\or August\or September\or October\or November\or December\fi}, \number \year} 
+
+
+\title{みーくんが圏論に入門する！（仮題）}
+\date{\today}
+\author{itmz153}
+\begin{document}
+\maketitle
+
+\section{圏の定義}
+圏とは
+
+\section{函手の定義}
+
+\section{反変函手の例}
+$k$を体とする．$k$上の線形空間$V, W$について，
+\begin{align*}
+{\bold{Hom}}(V, W) \overset{\mathrm{def}}{=} \{{\rm{linear\ map}}: V \to W\}
+\end{align*}
+は，線形空間になる．（わかる．）
+
+線形空間になることは，
+\begin{align*}
+f, g \in {\bold{Hom}}(V, W)
+\end{align*}
+に対して，和を
+\begin{align*}
+(f + g)(x) = f(x) + g(x)
+\end{align*}
+とすれば，
+\begin{align*}
+f + g \in {\bold{Hom}}(V, W)
+\end{align*}
+$a \in k$にたいして，スカラー倍を
+\begin{align*}
+(a f)(x) = af(x)
+\end{align*}
+とすれば
+\begin{align*}
+af \in {\bold{Hom}}(V, W)
+\end{align*}
+となる．結局，$f,g \in {\bold{Hom}}(V, W), a,b \in k$ならば，
+\begin{align*}
+af + bg \in {\bold{Hom}}(V, W)
+\end{align*}
+すなわち，${\bold{Hom}}(V, W)$は線形空間の定義を満たす．（本当は，和についての逆元とか単位元の存在とか言わないといけないけどそれは後で書くよ．）
+このことから，ただちに${\bold{Hom}}(V, W)$は線形空間になることがわかる．
+
+話を続けよう．（寝ろ．）線形空間$W$を固定して，線形写像$f:V \to V'$は線形写像
+\begin{align*}
+f^{*} :  {\bold{Hom}}(V', W) \to {\bold{Hom}}(V, W)
+\end{align*}
+を誘導する．（むむ？）
+
+はい，もう寝ます．
+
+
+\thispagestyle{empty}
+
+
+\end{document}
