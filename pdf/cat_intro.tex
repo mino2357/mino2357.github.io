@@ -1,69 +1,112 @@
-\documentclass[12pt]{jsarticle}
+\documentclass[dvipdfmx,12pt]{jsarticle}
 \usepackage{amsmath}
 \usepackage[usenames]{color} %フォントカラー
 \usepackage{amssymb} %数式記号
 \usepackage[utf8]{inputenc} %発音区別符アルファベットの直接入力
+\usepackage{amsthm}
 \usepackage{amscd}
 \usepackage{pb-diagram}
+%\usepackage[all]{xy}
+\usepackage{tikz}
+\usetikzlibrary{cd}
+%\usepackage{mathptmx}
 
 \renewcommand{\today}{ \number \day \  {\ifcase \month \or January\or February\or March\or April\or May \or June\or July\or August\or September\or October\or November\or December\fi}, \number \year} 
 
+\theoremstyle{definition}
+\newtheorem{theorem}{定理}
+\newtheorem*{theorem*}{定理}
+\newtheorem{definition}[theorem]{定義}
+\newtheorem*{definition*}{定義}
 
 \title{みーくんが圏論に入門する！（仮題）}
 \date{\today}
 \author{itmz153}
 \begin{document}
 \maketitle
-
+%
+圏論がわからないので入門する．なんかHaskellとかの深い理解に役立つらしい【要出典】．数学もよく分かるようになるらしい【要出典】．参考文献として\cite{001}, \cite{002}を主に使っていく．その他については適宜参照元を明示する．
+%
 \section{圏の定義}
-圏とは
+%
+\begin{definition}
+圏(category)$\mathcal{A}$とは，
+\begin{itemize}
+  \item \textgt{対象}\footnote{今は考えない．}(object)の\underline{集まり}\footnote{今はそんなもんかと思ってくだされ．}$\mathrm{ob}(\mathcal{A})$
+  \item 各$A,B \in \mathrm{ob}(\mathcal{A})$について，$A$から$B$への\textgt{射}(map, morphism)または\textgt{矢印}(arrow)の\underline{集まり}$\mathcal{A}(A,B)$
+  \item 各$A,B,C \in \mathrm{ob}(\mathcal{A})$について，\textgt{合成}(composition)と呼ばれる函数
+\end{itemize}
+%
+\begin{center}
+\begin{tikzcd}[row sep=0.2cm]
+\mathcal{A}(B, C) \times \mathcal{A}(A, B) \ar[r] & \mathcal{A}(A, C) \\
+(g, f) \ar[r,mapsto] & g \circ f
+\end{tikzcd}
+\end{center}
+%
+\begin{itemize}
+  \item 各$A \in \mathrm{ob}(\mathcal{A})$について，$A$上の\textgt{恒等射}(identity)と呼ばれる$\mathcal{A}(A, A)$の元$1_{A}$
+\end{itemize}
+からなり，以下の公理を満たすもののことである．
+%
+\begin{itemize}
+	\item \textgt{結合法則}：
+		\begin{align*}
+			&\forall f \in \mathcal{A}(A,B), \forall g \in \mathcal{A}(B,C), \forall h \in \mathcal{A}(C,D);\ (h \circ g) \circ f = h \circ (g \circ f)
+		\end{align*}
+	\item \textgt{単位法則}：
+		\begin{align*}
+			\forall f \in \mathcal{A}(A,B);\ f \circ 1_{A} = f = 1_{B} \circ f
+		\end{align*}
+\end{itemize}
+\end{definition}
 
 \section{函手の定義}
 
-\section{反変函手の例}
-$k$を体とする．$k$上の線形空間$V, W$について，
+\subsection{反変函手の例}
+$K$を体とする．$K$上の線形空間$V, W$について，
 \begin{align*}
-{\bold{Hom}}(V, W) \overset{\mathrm{def}}{=} \{{\rm{linear\ map}}: V \to W\}
+{\bold{Hom}}_{K}(V, W) \overset{\mathrm{def}}{=} \{{\rm{linear\ map}}: V \to W\}
 \end{align*}
-は，線形空間になる．（わかる．）
+は，線形空間になる．（わかる．しかし，念のため復習に下に線形空間になることを確認しておく．）
 
 線形空間になることは，
 \begin{align*}
-f, g \in {\bold{Hom}}(V, W)
+F, G \in {\bold{Hom}}_{K}(V, W)
 \end{align*}
-に対して，和を
+に対して，和を線形空間$V$の各点$x$に対して，（あえて点という．）
 \begin{align*}
-(f + g)(x) = f(x) + g(x)
+(F + G)(x) := F(x) + G(x)
 \end{align*}
-とすれば，
+で定義すれば，$W$は線形空間なので，
 \begin{align*}
-f + g \in {\bold{Hom}}(V, W)
+F + G \in {\bold{Hom}}_{K}(V, W)
 \end{align*}
-$a \in k$にたいして，スカラー倍を
+$a \in K$にたいして，スカラー倍を
 \begin{align*}
-(a f)(x) = af(x)
+(a F)(x) := aF(x)
 \end{align*}
-とすれば
+とすれば，これも$W$が線形空間なので，
 \begin{align*}
-af \in {\bold{Hom}}(V, W)
+aF \in {\bold{Hom}}_{K}(V, W)
 \end{align*}
-となる．結局，$f,g \in {\bold{Hom}}(V, W), a,b \in k$ならば，
+となる．結局，$F,G \in {\bold{Hom}}_{K}(V, W), a,b \in K$ならば，
 \begin{align*}
-af + bg \in {\bold{Hom}}(V, W)
+aF + bG \in {\bold{Hom}}_{K}(V, W)
 \end{align*}
-すなわち，${\bold{Hom}}(V, W)$は線形空間の定義を満たす．（本当は，和についての逆元とか単位元の存在とか言わないといけないけどそれは後で書くよ．）
-このことから，ただちに${\bold{Hom}}(V, W)$は線形空間になることがわかる．
+すなわち，${\bold{Hom}}_{K}(V, W)$は線形空間の定義を満たす．（本当は，和についての逆元とか単位元の存在とか言わないといけないけどそれは後で書くよ．やっぱ面倒なので略す．）
+このことから，ただちに${\bold{Hom}}_{K}(V, W)$は線形空間になることがわかる．
 
-話を続けよう．（寝ろ．）線形空間$W$を固定して，線形写像$f:V \to V'$は線形写像
+話を続けよう．線形空間$W$を固定して，線形写像$f:V \to V'$は線形写像
 \begin{align*}
-f^{*} :  {\bold{Hom}}(V', W) \to {\bold{Hom}}(V, W)
+f^{*} :  {\bold{Hom}}_{K}(V', W) \to {\bold{Hom}}_{K}(V, W)
 \end{align*}
-を誘導する．（むむ？）
+を誘導する．
 
-はい，もう寝ます．
-
-
-\thispagestyle{empty}
+\begin{thebibliography}{9}
+  \bibitem{001} Saunders MacLane, 「圏論の基礎」
+  \bibitem{002} Tom Leinster, 「ベーシック圏論」
+\end{thebibliography}
 
 
 \end{document}
