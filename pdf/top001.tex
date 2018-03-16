@@ -1,0 +1,130 @@
+\documentclass[dvipdfmx,12pt]{jsarticle}
+\usepackage{amsmath}
+\usepackage[usenames]{color} %フォントカラー
+\usepackage{amssymb} %数式記号
+\usepackage[utf8]{inputenc} %発音区別符アルファベットの直接入力
+\usepackage{amsthm}
+\usepackage{amscd}
+\usepackage{pb-diagram}
+\usepackage{ulem}
+%\usepackage[all]{xy}
+\usepackage{tikz}
+\usetikzlibrary{cd}
+%\usepackage{mathptmx}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\theoremstyle{definition}
+\newtheorem{theorem}{命題}
+\newtheorem*{theorem*}{命題}
+\newtheorem{definition}[theorem]{定義}
+\newtheorem*{definition*}{定義}
+\renewcommand\proofname{{\bf{証明}}}
+
+%\title{数学とプログラミング演習}
+\date{}
+
+\begin{document}
+%\maketitle
+
+\subsection*{距離空間}
+自分のための定義，定理，証明まとめ．
+%
+\begin{definition}[収束]
+距離空間$(X,d)$において，\underline{点列$\{ a_{i} \}_{i \in \mathbb{N}}$が$a\in X$に収束する}とは，\\
+$
+\ \ \ \ \ \ \ \ \ \ \ \ \forall \varepsilon >0,\ \exists N \in \mathbb{N},\ \forall n > N,\ d(a_{n}, a) < \varepsilon.
+$
+\end{definition}
+%
+\begin{definition}[収束列]
+距離空間$(X,d)$において，\underline{点列$\{ a_{i} \}_{i \in \mathbb{N}}$が収束列}であるとは，\\
+$
+\ \ \ \ \ \ \ \ \ \ \ \ \exists a \in X,\ \forall \varepsilon > 0,\ \exists N \in \mathbb{N},\ \forall n>N,\ d(a_{n},a) < \varepsilon.
+$
+\end{definition}
+%
+\begin{definition}[Cauchy列]
+距離空間$(X,d)$において，\underline{点列$\{ a_{i} \}_{i \in \mathbb{N}}$がCauchy列}であるとは，\\
+$
+\ \ \ \ \ \ \ \ \ \ \ \ \forall \varepsilon > 0,\ \exists N \in \mathbb{N},\ \forall m,\forall n > N,\ d(a_{m}, a_{n}) < \varepsilon.
+$
+\end{definition}
+%
+\begin{definition}[点列コンパクト]
+距離空間$(X,d)$が\underline{点列コンパクト}であるとは，任意の点列が収束部分列を持つ空間のことである．
+\end{definition}
+%
+\begin{definition}[完備]
+距離空間$(X,d)$が\underline{完備}であるとは，$X$における任意のCauchy列が収束することである．
+\end{definition}
+%
+\begin{definition}[全有界]
+距離空間$(X,d)$が\underline{全有界}であるとは，任意の$\varepsilon > 0$に対して，$X$の有限個の点，$x_{1}, x_{2}, x_{3}, \ldots , x_{n}$を選んで，\\
+$$
+X = \bigcup_{k=1}^{n} N(x_{1}; \varepsilon)
+$$
+となるようにできることである．ただし，$N(a,\varepsilon)$は，点$a$の$\varepsilon$近傍，すなわち
+$
+N(a;\varepsilon) := \{ x \in X \mid d(a,x) < \varepsilon \}のことである．
+$
+\end{definition}
+%
+\begin{theorem}
+距離空間$(X,d)$が \\
+$$
+「点列コンパクト」 \Longrightarrow 「全有界」かつ「完備」
+$$
+であることを示せ．
+\end{theorem}
+%
+\begin{proof}
+$X$から，点列$\{ a_{i} \}_{i \in \mathbb{N}}$を取ってくる．今，$X$は点列コンパクト空間なので，以下のような，部分列$\{ a_{k(i)} \}_{i \in \mathbb{N}}$を収束させるような狭義単調増加函数
+$$
+k: \mathbb{N} \to \mathbb{N}
+$$
+が存在する．
+\end{proof}
+
+\subsection*{位相空間論についてのある問題}
+以下，いろいろ問題がありすぎる．
+
+\begin{definition}
+$\forall U \in \mathcal{O}$になんらかの正の実数$\mathrm{size}(U) \in \mathbb{R}_{\ge 0}$（$U$の\underline{サイズ}と呼ぶことにする．）が付与された位相空間$(X, \mathcal{O}, \mathrm{size})$が\underline{全有界}であるとは，任意の$E>0$に対して，$n \in \mathbb{N}$が存在して，それぞれのサイズが$E$以下であるような$U_{1}, U_{2}, \ldots ,U_{n}$が存在し，その合併がXの（有限）開被覆になっていることである．
+\end{definition}
+
+↑これもどうかと思うよ．
+
+\begin{definition}
+位相空間$(X, \mathcal{O})$について，点$p \in X$の\underline{近傍}とは，点$p$を含む$X$の開集合$U$を含む部分集合$V$のことをいう．
+\end{definition}
+
+\begin{definition}
+位相空間$(X,\mathcal{O})$において，\underline{点列$\{ a_{i} \}_{i \in \mathbb{N}}$が点$a$に収束する}と，$a$の任意の近傍$U$に対して，$\exists N \in \mathbb{N}$，$\forall n \ge N \Longrightarrow a \in U$が成り立つことである．
+\end{definition}
+
+\begin{definition}
+位相空間$(X,\mathcal{O})$が\underline{点列コンパクト}であるとは，任意の点列が収束部分列を持つことである．
+\end{definition}
+
+\begin{definition}
+\sout{位相空間$(X,\mathcal{O})$が\underline{完備}であるとは，$\forall i\in \mathbb{N},\ a_{i} \in X$なる任意の点列$\{ a_{i} \}_{i \in \mathbb{N}}$が}\\
+\sout{収束することである．}
+\end{definition}
+
+この設定で以下を証明しないさい．逆も成り立つ場合，それを証明せよ．
+
+\begin{theorem*}
+位相空間$(X, \mathcal{O})$について， \\
+\ \ \ \ \ \ \ \ \ 「点列コンパクト」 $\Longrightarrow$ 「全有界」かつ「完備」
+\end{theorem*}
+
+
+
+\footnote[0]{
+質問等はmino2357あっとgmail.comまで
+}
+
+\thispagestyle{empty}
+
+
+\end{document}
