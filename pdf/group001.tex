@@ -2,14 +2,20 @@
 \usepackage{amsmath}
 \usepackage{tikz}
 \usetikzlibrary{cd}
-\renewcommand{\thefootnote}{\fnsymbol{footnote}}
-
-%\title{数学とプログラミング演習}
-\date{}
+%\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\usepackage{url}
+\title{無題--群論--001}
+\author{itmz153}
+\date{\today}
 
 \begin{document}
-%\maketitle
+\maketitle
+\section*{とある会話}
+K氏「任意のアーベル群$G(S, **)$に対して$a ** b = abc (c∈S)$としたとき$(S, **)$も群になるやんけ！\footnote{\url{https://twitter.com/Kory__3/status/971393264489152513}}」 \\
 
+M氏「証明を\footnote{\url{https://twitter.com/math153arclight/status/971395172335435776}}」 \\
+
+$\vdots$
 \section*{群構造}
 \subsection*{群の定義}
 群とは，集合と\underline{適切}な演算の対である．すなわち集合を$G$，演算を$\phi$とすれば，$(G,\phi)$であり，演算について次の公理$\gamma_1 , \gamma_2$を満たせば$(G,\phi)$を群という．演算は2変数の写像，$G \times G \to G$である．
@@ -20,17 +26,17 @@
 $\gamma_1$は演算の結合性，$\gamma_2$は，単位元の存在と逆元の存在性を述べている．今後，単位元は$e$と書き，$x \in G$の逆元は$g^{-1}$と書くことにする．
 今後毎回$\phi$を書くとややこしいので，代わりに括弧を省き中置演算子$*$を使うことにする．
 また，群$(G,*)$のことを，ただ単に群$G$と書くことがある．その場合，先に述べた適切な演算が$G$に入っていると思えば良い．
-\subsection*{とある話題}
+\subsection*{とある会話について}
 $(G,*)$を群とする．ここで，$c \in G$を固定して，
 \begin{align*}
 Gc = \{g*c \mid g \in G\}
 \end{align*}
-なる集合を考える．$G$は群なので$Gc$も群である（表示は違うが同じ演算が自然に入ると思えば良い）．ここで，群$Gc$に次のような演算$\langle \_, \_ \rangle$を導入する．
+なる集合を考える．$G$は群なので$Gc$も群である（表示は違うが同じ演算が自然に入ると思えば良い）．ここで，群$Gc$に次のような演算$\langle \_, \_ \rangle_c$を導入する．
 %
 \begin{center}
 \begin{tikzcd}[row sep=0.2cm]
-\langle \_, \_ \rangle \ :\ Gc \times Gc\ar[r] & Gc \\
-\langle x , y\rangle \ar[r,mapsto] &  (x * y) * c
+\langle \_, \_ \rangle_c \ :\ Gc \times Gc\ar[r] & Gc \\
+\langle x , y\rangle_c \ar[r,mapsto] &  (x * y) * c
 \end{tikzcd}
 \end{center}
 %
@@ -38,63 +44,63 @@ Gc = \{g*c \mid g \in G\}
 %
 \begin{center}
 \begin{tikzcd}[row sep=0.2cm]
-\langle \_, \_ \rangle \ :\ G \times G\ar[r] & G \\
-\langle x , y\rangle \ar[r,mapsto] &  x * y * c
+\langle \_, \_ \rangle_c \ :\ G \times G\ar[r] & G \\
+\langle x , y\rangle_c \ar[r,mapsto] &  x * y * c
 \end{tikzcd}
 \end{center}
 %
 この演算が，群の演算の公理$\gamma_1, \gamma_2$を満たしているか確認していこう．
 演算が閉じていることは明らか．はじめに，結合法則がなりたつか見ていこう．
 \begin{align*}
-\langle \langle x, y \rangle z \rangle &= \langle (x*y)*c , z\rangle \\
+\langle \langle x, y \rangle_c , z \rangle_c &= \langle (x*y)*c , z\rangle_c \\
 &= x*y*c*z*c \\
 &= \cdots
 \end{align*}
 なんだかこのままだと何もできそうにないので，\underline{$c$を群の中心$Z(G)$から取ってこよう．}
 群の中心とは，$\{ x \in G \mid \forall g [g*x = x*g] \}$のことである．群の中心は$G$の正規部分群となるなど面白い性質がある（確認せよ）．
+
+\underline{今後，$c \in Z(G)$とする．}
 \begin{align*}
-\langle \langle x, y \rangle z \rangle &= x*y*c*z*c \\
+\langle \langle x, y \rangle_c , z \rangle_c &= x*y*c*z*c \\
 &= x * y*z*c *c \\
 &= x * \langle y,z \rangle * c \\
-&= \langle x, \langle y,z \rangle \rangle
+&= \langle x, \langle y,z \rangle_c \rangle_c
 \end{align*}
 無事に新しく導入した演算は結合法則を満たすことがわかった．
 次に，単位元の存在性を確認しよう．
 \begin{align*}
-\forall g,\exists e [\langle g,e \rangle = \langle e,g \rangle = g]
+\exists e ,\forall g [\langle g,e , \rangle_c = \langle e,g \rangle_c = g]
 \end{align*}
 いま，単位元の候補として$e':=c^{-1}$と置こう．任意の$g$に対して，
 \begin{align*}
-\langle g,e' \rangle &= \langle g,c^{-1} \rangle \\
+\langle g,e' \rangle_c &= \langle g,c^{-1} \rangle_c \\
 &=g * c^{-1} * c = g
 \end{align*}
 \begin{align*}
-\langle e',g \rangle &= \langle c^{-1},g \rangle \\
+\langle e',g \rangle_c &= \langle c^{-1},g \rangle_c \\
 &=c^{-1} * g * c = g
 \end{align*}
 %故に演算$\langle,\rangle$によって定義される群には，単位元が存在する．（一意性は各自確認せよ．）
 次に逆元について考察する．
 \begin{align*}
-\forall g,\exists u [\langle g,u \rangle = \langle u,g \rangle = e' = c^{-1}]
+\forall g,\exists u [\langle g,u \rangle_c = \langle u,g \rangle_c = e' = c^{-1}]
 \end{align*}
 $u:=g^{-1}*c^{-2}$とすれば，
 \begin{align*}
-\langle g,u \rangle &= \langle g,g^{-1}*c^{-2} \rangle \\
+\langle g,u \rangle_c &= \langle g,g^{-1}*c^{-2} \rangle_c \\
 &=g * g^{-1}*c^{-2} *c \\
 & = c^{-1} = e'
 \end{align*}
 \begin{align*}
-\langle u,g \rangle &= \langle g^{-1}*c^{-2},g \rangle \\
+\langle u,g \rangle_c &= \langle g^{-1}*c^{-2},g \rangle_c \\
 &=g^{-1}*c^{-2} * g *c\\
 & = c^{-1} = e'
 \end{align*}
-故に，新たな群の演算$\langle , \rangle$は演算の公理$\gamma_1, \gamma_2$を満たしているので，$c \in Z(G)$なら$(G,\langle , \rangle)$は群である．
+よって，$e':=c^{-1}は単位元の公理を満たす．$故に，新たな群の演算$\langle , \rangle_c$は演算の公理$\gamma_1, \gamma_2$を満たしているので，$c \in Z(G)$なら$(G,\langle , \rangle_c)$は群である．
 
 さて，この群はなんであろうか？
 
-\footnote[0]{
-質問等はmino2357あっとgmail.comまで
-}
+%\footnote[0]{質問等はmino2357あっとgmail.comまで}
 
 \thispagestyle{empty}
 
