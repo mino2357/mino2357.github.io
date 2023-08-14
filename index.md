@@ -21,10 +21,9 @@
   4. [正則化法と全保存型差分法を用いた重力N体問題のシミュレーション](https://catalog.lib.kyushu-u.ac.jp/opac_download_md/14286/Article_No_14.pdf)
   5. [Makino J. , 6 計算法 --- 時間領域](https://jun-makino.sakura.ne.jp/papers/bussei-nbody/node7.html)
   6. [重力多体系の天体物理](https://jun-makino.sakura.ne.jp/talks/waseda-kougi-2006.pdf)
-  7. [E.ハイラー, S.P.ネルセット, G.ヴァンナー著「常微分方程式の数値解法 I」](https://www.maruzen-publishing.co.jp/item/b294285.html)
-     - とんでもなく面白い本．広範な分野に使う．
-  8. [天文学特別講義IV](https://jun-makino.sakura.ne.jp/kougi/stellar_dynamics_2009/note1/note1-e.html)
-  9.  [Sverre J. Aarseth, "Gravitational N-Body Simulations: Tools and Algorithms (Cambridge Monographs on Mathematical Physics)"](https://www.cambridge.org/core/books/gravitational-nbody-simulations/A5D1D86EA634C9D354B7C82C029D6933)
+  7. [E.ハイラー, S.P.ネルセット, G.ヴァンナー著「常微分方程式の数値解法 I」](https://www.maruzen-publishing.co.jp/item/b294285.html) とんでもなく面白い本．広範な分野に使う．
+  1. [天文学特別講義IV](https://jun-makino.sakura.ne.jp/kougi/stellar_dynamics_2009/note1/note1-e.html)
+  2.  [Sverre J. Aarseth, "Gravitational N-Body Simulations: Tools and Algorithms (Cambridge Monographs on Mathematical Physics)"](https://www.cambridge.org/core/books/gravitational-nbody-simulations/A5D1D86EA634C9D354B7C82C029D6933)
 - [補間に関する数値実験](https://github.com/mino2357/interpolation-in-regression)
   - 偏微分方程式の数値計算用に書いているもの．統計の非線形（重）回帰分析とかでも使えると思う．まだ100倍程度は速く計算できると思っている．関数は多項式でやっているが他の関数でも出来るだろう．
 - [近傍探索計算](https://github.com/mino2357/nearest_neighbor_search)
