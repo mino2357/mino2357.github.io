@@ -12,9 +12,8 @@
 ![](images/wave_1_2_3_4d.gif)
   - 黒が1次元，赤が2次元，緑が3次元，青が4次元．値は1つ目の座標上の値をプロットしたもの．
 - [重力多体問題](https://github.com/mino2357/N-body-Scrapbox)
-  - Youtube動画[リンク](https://youtu.be/9ut9rDGyVLY)
-    - 書いてあるとおりまだ取り掛かったばかりなのでただそれっぽいがそれなりにかっこいい動画になっている．
-  - N体問題の数値計算の実験場．かなり奥深い世界が広がっている．沼もたくさんある．適当に参考にしているものを挙げておく．あとで整理しておく．やろうと思ったきっかけは3体問題が面白かったから．
+  - 書いてあるとおりまだ取り掛かったばかりなのでただそれっぽいがそれなりにかっこいい動画になっている．
+    - N体問題の数値計算の実験場．かなり奥深い世界が広がっている．沼もたくさんある．適当に参考にしているものを挙げておく．あとで整理しておく．やろうと思ったきっかけは3体問題が面白かったから．
   1. [Makino J. (2001), 重力多体系の数値計算](https://repository.kulib.kyoto-u.ac.jp/dspace/bitstream/2433/97012/1/KJ00004711437.pdf)
   2. [Kepler問題におけるKustaanheimo-Stiefel変換](https://osanshouo.github.io/blog/2021/04/12-kustaanheimo-stiefel/)
   3. [谷川清隆 訳、Prasenjit Saha and Scott Tremaine (1992), Symplectic integrators for solar system dynamics](http://th.nao.ac.jp/MEMBER/tanikawa/list08/saha/st1.pdf)
@@ -22,8 +21,8 @@
   5. [Makino J. , 6 計算法 --- 時間領域](https://jun-makino.sakura.ne.jp/papers/bussei-nbody/node7.html)
   6. [重力多体系の天体物理](https://jun-makino.sakura.ne.jp/talks/waseda-kougi-2006.pdf)
   7. [E.ハイラー, S.P.ネルセット, G.ヴァンナー著「常微分方程式の数値解法 I」](https://www.maruzen-publishing.co.jp/item/b294285.html) とんでもなく面白い本．広範な分野に使う．
-  1. [天文学特別講義IV](https://jun-makino.sakura.ne.jp/kougi/stellar_dynamics_2009/note1/note1-e.html)
-  2.  [Sverre J. Aarseth, "Gravitational N-Body Simulations: Tools and Algorithms (Cambridge Monographs on Mathematical Physics)"](https://www.cambridge.org/core/books/gravitational-nbody-simulations/A5D1D86EA634C9D354B7C82C029D6933)
+  8. [天文学特別講義IV](https://jun-makino.sakura.ne.jp/kougi/stellar_dynamics_2009/note1/note1-e.html)
+  9.  [Sverre J. Aarseth, "Gravitational N-Body Simulations: Tools and Algorithms (Cambridge Monographs on Mathematical Physics)"](https://www.cambridge.org/core/books/gravitational-nbody-simulations/A5D1D86EA634C9D354B7C82C029D6933)
 - [補間に関する数値実験](https://github.com/mino2357/interpolation-in-regression)
   - 偏微分方程式の数値計算用に書いているもの．統計の非線形（重）回帰分析とかでも使えると思う．まだ100倍程度は速く計算できると思っている．関数は多項式でやっているが他の関数でも出来るだろう．
 - [近傍探索計算](https://github.com/mino2357/nearest_neighbor_search)
