@@ -42,7 +42,7 @@
 
 researchmap: [Takaaki MINOMO](https://researchmap.jp/t_minomo/?lang=japanese)
 
-ルター派のゆるふわクリスチャン．長年パニック障害に苦しむ．人混みが苦手．
+ルター派のゆるふわクリスチャン．パニック障害とうつ病とともに生きる．人混みが苦手．
 
 ### 趣味
 
@@ -51,7 +51,7 @@ researchmap: [Takaaki MINOMO](https://researchmap.jp/t_minomo/?lang=japanese)
 - 思いついた効率的だったり高精度な数値計算法を実装して確かめること．
 - 数理モデルの構築，実装．
 - 最近よく読んでいる本の分野．
-　- 微分幾何学，相対論，重力多体問題，熱力学．
+  - 微分幾何学，相対論，重力多体問題，熱力学．
 
 ### List of my poster presentations.
 「Mathematical model of the cell population movement」，第18回ソウル大ジョイントシンポジウム, 2015/11/27, 場所：ソウル大学． Abstract
