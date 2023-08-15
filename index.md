@@ -31,6 +31,10 @@
 - [熱方程式（拡散方程式とも言う）の数値計算法．](docs/pdf_files/Heat_equation.pdf)数値計算の入門時代に書かれたもの． (PDF)
 - [なんで153なのか．](docs/pdf_files/dmath.pdf)大昔（大学に入る前）に書いたもの．実験数学的ななにかとポエム． (PDF)
 
+# 数値計算の可視化
+
+- [重力多体問題](/docs/visualization-01.md)
+
 # 数学雑記とメモ帳
 
 - [補間と回帰](docs/interp-01.md)
