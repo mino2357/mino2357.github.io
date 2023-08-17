@@ -4,4 +4,5 @@ plugins:
 title: "うみがえるのしっぽ"
 description: "フグを食べて丸くなったカエル．"
 show_downloads: false
-# google_analytics: 
+github:
+  is_project_page: false
