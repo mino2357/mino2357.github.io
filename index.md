@@ -8,11 +8,13 @@
 
 # 数値計算関連
 
+![黒が1次元，赤が2次元，緑が3次元，青が4次元．値は1つ目の座標上の値をプロットしたもの．](images/wave_1_2_3_4d.gif)
 - [N次元ユークリッド空間上の波動方程式はNが奇数か偶数で挙動が変わる](https://github.com/mino2357/wave_equation_difference_between_3d_and_4d)という事実を可視化したもの．
-![](images/wave_1_2_3_4d.gif)
-  - 黒が1次元，赤が2次元，緑が3次元，青が4次元．値は1つ目の座標上の値をプロットしたもの．
+
+![N=2^24個の多体問題](images/n_2_24.png)
 - [重力多体問題](https://github.com/mino2357/N-body-Scrapbox)
-  - N体問題の数値計算の実験場．かなり奥深い世界が広がっている．沼もたくさんある．やろうと思ったきっかけは3体問題が面白かったから．
+  - [基礎方程式，計算の際の無次元化](docs/n-body-eq.md)
+  - [天体の位置の調べ方, Horizons On-line Ephemeris Systemの使い方メモ]()
 - [補間に関する数値実験](https://github.com/mino2357/interpolation-in-regression)
   - 偏微分方程式の数値計算用に書いているもの．統計の非線形（重）回帰分析とかでも使えると思う．まだ100倍程度は速く計算できると思っている．関数は多項式でやっているが他の関数でも出来るだろう．
 - [近傍探索計算](https://github.com/mino2357/nearest_neighbor_search)
