@@ -14,7 +14,7 @@
 ![N=2^24個の多体問題](images/n_2_24.png)
 - [重力多体問題](https://github.com/mino2357/N-body-Scrapbox)
   - [基礎方程式，計算の際の無次元化](docs/n-body-eq.md)
-  - [天体の位置の調べ方, Horizons On-line Ephemeris Systemの使い方メモ]()
+  - [天体の位置の調べ方, Horizons On-line Ephemeris Systemの使い方メモ](docs/use_HorizonsOn-lineEphemerisSystem.md)
 - [補間に関する数値実験](https://github.com/mino2357/interpolation-in-regression)
   - 偏微分方程式の数値計算用に書いているもの．統計の非線形（重）回帰分析とかでも使えると思う．まだ100倍程度は速く計算できると思っている．関数は多項式でやっているが他の関数でも出来るだろう．
 - [近傍探索計算](https://github.com/mino2357/nearest_neighbor_search)
