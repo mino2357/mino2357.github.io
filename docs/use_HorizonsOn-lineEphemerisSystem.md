@@ -182,3 +182,5 @@ Computations by ...
  
 Connection closed by foreign host.
 ```
+
+[トップページへ](../index.md)
