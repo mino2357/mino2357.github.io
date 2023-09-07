@@ -15,6 +15,7 @@
 - [重力多体問題](https://github.com/mino2357/N-body-Scrapbox)
   - [基礎方程式，計算の際の無次元化](docs/n-body-eq.md)
   - [天体の位置の調べ方, Horizons On-line Ephemeris Systemの使い方メモ](docs/use_HorizonsOn-lineEphemerisSystem.md)
+  - [太陽系の長時間の軌道計算](docs/sol-system.md)
 - [補間に関する数値実験](https://github.com/mino2357/interpolation-in-regression)
   - 偏微分方程式の数値計算用に書いているもの．統計の非線形（重）回帰分析とかでも使えると思う．まだ100倍程度は速く計算できると思っている．関数は多項式でやっているが他の関数でも出来るだろう．
 - [近傍探索計算](https://github.com/mino2357/nearest_neighbor_search)
@@ -23,6 +24,7 @@
   - 数値計算の入門時代に書かれたもの．
 - [なんで153なのか．](docs/pdf_files/dmath.pdf) (PDF)
   - 大昔（大学に入る前）に書いたもの．実験数学的ななにかとポエム．
+- [研究としての数値計算の在り方](docs/numerical-calculation.md)
 
 # 数値計算の可視化
 
@@ -54,8 +56,9 @@ researchmap: [Takaaki MINOMO](https://researchmap.jp/t_minomo/?lang=japanese)
 - モータースポーツ．
 - 思いついた効率的だったり高精度な数値計算法を実装して確かめること．
 - 数理モデルの構築，実装．
+- 流体計算．
 - 最近よく読んでいる本の分野．
-  - 微分幾何学，相対論，重力多体問題，熱力学．
+  - 微分幾何学．相対論．重力多体問題．熱力学．天体物理学．
 
 ### List of my poster presentations.
 「Mathematical model of the cell population movement」，第18回ソウル大ジョイントシンポジウム, 2015/11/27, 場所：ソウル大学． Abstract

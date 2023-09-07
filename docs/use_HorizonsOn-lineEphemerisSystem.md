@@ -11,7 +11,7 @@ telnet:
 $ telnet horizons.jpl.nasa.gov 6775
 ```
 
-telnetでの使い方の例．太陽（@10）を原点としたときの地球（399）の位置と速度．
+telnetでの使い方の例．太陽（@10）を原点としたときの地球（399）の位置と速度．座標系はICRFである．
 
 ```
 JPL Horizons, version 4.97 

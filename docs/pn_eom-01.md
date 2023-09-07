@@ -3,7 +3,7 @@
 
 # Post Newtonian Equations of Motion.
 
-やってみたいが時間がない．
+やってみたいが時間がない． 
 
 ## Reference
 - Simon F. Portegies Zwart (Leiden Observatory), Tjarda C.N. Boekholt (Clarendon Laboratory, Oxford), Emiel Por (STScI), Adrian S. Hamers (MPI), Steve L.W. McMillan (Drexel), [Chaos in self-gravitating many-body systems: Lyapunov time dependence of N and the influence of general relativity](https://arxiv.org/abs/2109.11012)
