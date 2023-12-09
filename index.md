@@ -8,9 +8,7 @@
 
 # 数値計算関連
 
-![黒が1次元，赤が2次元，緑が3次元，青が4次元．値は1つ目の座標上の値をプロットしたもの．](images/wave_1_2_3_4d.gif)
-- [N次元ユークリッド空間上の波動方程式はNが奇数か偶数で挙動が変わる](https://github.com/mino2357/wave_equation_difference_between_3d_and_4d)という事実を可視化したもの．
-
+- [N次元ユークリッド空間上の波動方程式](https://github.com/mino2357/wave_equation_difference_between_3d_and_4d)はNが奇数か偶数で挙動が変わる．
 ![N=2^24個の多体問題](images/n_2_24.png)
 - [重力多体問題](https://github.com/mino2357/N-body-Scrapbox)
   - [基礎方程式，計算の際の無次元化](docs/n-body-eq.md)
@@ -25,6 +23,9 @@
 - [なんで153なのか．](docs/pdf_files/dmath.pdf) (PDF)
   - 大昔（大学に入る前）に書いたもの．実験数学的ななにかとポエム．
 - [研究としての数値計算の在り方](docs/numerical-calculation.md)
+
+# Advent Calendar ネタ
+- [Taylor-Greenの流れとElmer入門](docs/advent_elmer.md)
 
 # 数値計算の可視化
 
