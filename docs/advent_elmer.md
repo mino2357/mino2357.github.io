@@ -314,7 +314,7 @@ Youtube動画への[リンク](https://youtu.be/HycEdr3vN-g)．
 
 [!['youtube link'](tgv/screenshot.png)](https://youtu.be/HycEdr3vN-g)
 
-振動しているのは圧力の積分定数分を特別指定せずにソルバに任せているのでそのせいか．
+圧力が振動しているように見える．
 
 35秒あたりで対称性が崩れて渦が移動し始める．これはもちろん数値誤差が要因である．
 
