@@ -60,7 +60,7 @@ $ sudo apt install elmerfem-csc-eg
 
 Taylor–Green渦（以下ではTGVと略記する）を計算する．[Wikipediaの記事](https://en.wikipedia.org/wiki/Taylor%E2%80%93Green_vortex)を参考に2次元で計算することにする．
 
-数値計算を行う領域 $\Omega$ は $(0, 2\pi)^2 \subset \mathbb{R}^2$ として，時刻を $t$ とし， $(x,y) \in \Omega$ なる流体の速度場の時間発展の $x$ 成分を $u(t,x,y)$ ， $y$ 成分を $v(t,x,y)$ とすると非圧縮性流体を仮定したNavier-Stokes方程式（以下NS方程式と略記）は以下の通りになる（導出は流体力学の教科書を参照）．ただし $\nu$ は正の定数であり動粘性係数と呼ばれる．また， $\rho$ は密度で正定数（非圧縮）である． $p$ は圧力で密度に比例する量とする（理想気体の仮定）．
+数値計算を行う領域 $\Omega$ は $(0, 2\pi)^2 \subset \mathbb{R}^2$ として，時刻を $t$ とし， $(x,y) \in \Omega$ なる流体の速度場の時間発展の $x$ 成分を $u(t,x,y)$ ， $y$ 成分を $v(t,x,y)$ とすると非圧縮性流体を仮定したNavier-Stokes方程式（以下NS方程式と略記）は以下の通りになる（導出は流体力学の教科書を参照）．ただし $\nu$ は正の定数であり動粘性係数と呼ばれる．また， $\rho$ は密度で正定数（非圧縮）である． $p$ 以下の3つの方程式から定まる量で圧力と呼ばれる．
 
 $$
 {\frac {\partial u}{\partial t}}+u{\frac {\partial u}{\partial x}}+v{\frac {\partial u}{\partial y}}=-{\frac {1}{\rho }}{\frac {\partial p}{\partial x}}+\nu \left({\frac {\partial ^{2}u}{\partial x^{2}}}+{\frac {\partial ^{2}u}{\partial y^{2}}}\right) \\
