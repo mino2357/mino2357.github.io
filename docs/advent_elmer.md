@@ -5,7 +5,7 @@
 
 この記事は [LipersInSlums Advent Calendar 2023 スラム社会実装の理論と実践〜もうみんな苦しんでる。苦しんでないのはおまえだけ〜](https://adventar.org/calendars/9461) の10日目の記事です．（待降節第2主日．）
 
-昨日の記事はAlweさんの今更解説する統合戦略#2「ファントムと緋き貴石」（2023/12/09の21:59時点ではその存在を確認できず）でした．
+昨日の記事は「」でした．
 
 - Elmer とはなにかの説明は省略する．詳しくは[公式Webページ](https://www.csc.fi/web/elmer)．
   - バージョンは9.0とする．
@@ -342,7 +342,7 @@ Youtube動画への[リンク](https://youtu.be/HycEdr3vN-g)．
 
 あとElmerはいろいろな流体に限らずいろいろな物理現象を扱えるのでModelsManualを読みながら計算すると楽しいですよ．
 
-明日は赤熊🐻👑🦑🐍さんの「Python 3 への移行を見据えた Python 2.7 コードの書き方」です．
+明日は赤熊🐻👑🦑🐍さんの「[Python 3 への移行を見据えた Python 2.7 コードの書き方](https://scrapbox.io/akagma/Python_3_%E3%81%B8%E3%81%AE%E7%A7%BB%E8%A1%8C%E3%82%92%E8%A6%8B%E6%8D%AE%E3%81%88%E3%81%9F_Python_2.7_%E3%82%B3%E3%83%BC%E3%83%89%E3%81%AE%E6%9B%B8%E3%81%8D%E6%96%B9)」です．
 
 紅茶を飲むの再開しようかな〜．
 
